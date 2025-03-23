@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adulting Level: Expert Mode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 2.5rem;
+        }
+
+        .question {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin: 10px 0;
+            -webkit-appearance: none;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        input[type="range"]:hover {
+            opacity: 1;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: auto;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #6a11cb;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .question {
+                padding: 15px;
+            }
+
+            button {
+                padding: 12px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .question {
+                padding: 10px;
+            }
+
+            button {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HOW ADULT ARE YOU? 🤔</h1>
+        
+        <form action="/assess" method="post">
+            <div class="question">
+                <label>How much did you procrastinate today? 🐌</label>
+                <input type="range" name="procrastination" min="0" max="10" value="5">
+            </div>
+
+            <div class="question">
+                <label>Coffee consumption (cups) ☕</label>
+                <input type="range" name="coffee" min="0" max="10" value="3">
+            </div>
+
+            <div class="question">
+                <label>Actual motivation level 💪</label>
+                <input type="range" name="motivation" min="0" max="10" value="2">
+            </div>
+
+            <div class="question">
+                <label>Weekend plans productivity 🌴</label>
+                <input type="range" name="weekend_plans" min="0" max="10" value="1">
+            </div>
+
+            <button type="submit">REVEAL MY SAD TRUTH 😱</button>
+        </form>
+    </div>
+
+
+    <footer>
+        Assembled at 2 AM by sleep-deprived<a href="https://www.linkedin.com/in/choudhury-mehbub-alam-b6b191219/" target="_blank">DevLeo</a>
+    </footer>
+</body>
+</html>
